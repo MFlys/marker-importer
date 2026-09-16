@@ -1,0 +1,115 @@
+name: Bug report
+description: Report a reproducible problem with Marker Importer
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please include enough detail for the issue to be reproduced.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues and did not find the same problem.
+          required: true
+        - label: I am using an official Marker Importer release.
+          required: true
+
+  - type: input
+    id: marker_importer_version
+    attributes:
+      label: Marker Importer version
+      description: For example, 1.0.0
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: premiere_version
+    attributes:
+      label: Premiere Pro version
+      description: Include the full version number when possible.
+      placeholder: "26.0.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: OS version
+      placeholder: "Windows 11 24H2 / macOS 15.6"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: Source type
+      options:
+        - XML
+        - CSV
+        - Both
+        - Not source-related
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps are ideal. Include the relevant Recording starts at value and duplicate policy if applicable.
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Click...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect Marker Importer to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include the exact error message if there was one.
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Copy Diagnostics output
+      description: Use Marker Importer's Copy Diagnostics command when available. Review the text before posting it publicly.
+      render: text
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or screen recording
+      description: Drag and drop images or a short recording here if it helps show the problem.
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Anything else that could help reproduce or understand the issue.
