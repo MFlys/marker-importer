@@ -1,0 +1,69 @@
+name: Feature request
+description: Suggest an improvement or new workflow for Marker Importer
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are welcome. Describe the editing problem first, then the solution you have in mind.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues and did not find the same request.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Workflow problem
+      description: What is difficult, repetitive, slow, or impossible in your current marker workflow?
+      placeholder: "When I..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed solution
+      description: What would you like Marker Importer to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example workflow
+      description: A concrete before/after example is especially useful.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: How are you handling this today, if at all?
+
+  - type: input
+    id: premiere_version
+    attributes:
+      label: Premiere Pro version
+      description: Optional, but useful for host-specific requests.
+      placeholder: "26.0.2"
+
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Both / not OS-specific
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Screenshots, mockups, sample marker data, or other context.
